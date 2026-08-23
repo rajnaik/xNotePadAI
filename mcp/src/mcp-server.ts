@@ -40,11 +40,10 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID (from localStorage xnotepad-ai-tenant)' },
         title: { type: 'string', description: 'Note title' },
         content: { type: 'string', description: 'Note content' },
       },
-      required: ['tenant_id'],
+      required: [],
     },
   },
   {
@@ -52,10 +51,8 @@ const TOOLS = [
     description: 'List all notes for a tenant with titles, word counts, and dates',
     inputSchema: {
       type: 'object',
-      properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
-      },
-      required: ['tenant_id'],
+      properties: {},
+      required: [],
     },
   },
   {
@@ -64,10 +61,9 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         note_id: { type: 'string', description: 'Note ID' },
       },
-      required: ['tenant_id', 'note_id'],
+      required: ['note_id'],
     },
   },
   {
@@ -76,12 +72,11 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         note_id: { type: 'string', description: 'Note ID' },
         content: { type: 'string', description: 'New content' },
         title: { type: 'string', description: 'New title (optional)' },
       },
-      required: ['tenant_id', 'note_id', 'content'],
+      required: ['note_id', 'content'],
     },
   },
   {
@@ -90,10 +85,9 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         note_id: { type: 'string', description: 'Note ID to delete' },
       },
-      required: ['tenant_id', 'note_id'],
+      required: ['note_id'],
     },
   },
   {
@@ -102,10 +96,9 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         query: { type: 'string', description: 'Search query' },
       },
-      required: ['tenant_id', 'query'],
+      required: ['query'],
     },
   },
   {
@@ -114,10 +107,9 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         question: { type: 'string', description: 'Question to ask' },
       },
-      required: ['tenant_id', 'question'],
+      required: ['question'],
     },
   },
   {
@@ -126,10 +118,9 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         note_id: { type: 'string', description: 'Note ID' },
       },
-      required: ['tenant_id', 'note_id'],
+      required: ['note_id'],
     },
   },
   {
@@ -138,11 +129,10 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         note_id: { type: 'string', description: 'Note ID' },
         tags: { type: 'array', items: { type: 'string' }, description: 'Tags to add' },
       },
-      required: ['tenant_id', 'note_id', 'tags'],
+      required: ['note_id', 'tags'],
     },
   },
   {
@@ -151,11 +141,10 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         source_id: { type: 'string', description: 'Source note ID' },
         target_title: { type: 'string', description: 'Target note title to link to' },
       },
-      required: ['tenant_id', 'source_id', 'target_title'],
+      required: ['source_id', 'target_title'],
     },
   },
   {
@@ -164,11 +153,10 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         source_id: { type: 'string', description: 'Note to merge FROM (will be deleted)' },
         target_id: { type: 'string', description: 'Note to merge INTO' },
       },
-      required: ['tenant_id', 'source_id', 'target_id'],
+      required: ['source_id', 'target_id'],
     },
   },
   {
@@ -177,10 +165,9 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         note_id: { type: 'string', description: 'Note ID to archive' },
       },
-      required: ['tenant_id', 'note_id'],
+      required: ['note_id'],
     },
   },
   {
@@ -189,10 +176,9 @@ const TOOLS = [
     inputSchema: {
       type: 'object',
       properties: {
-        tenant_id: { type: 'string', description: 'Tenant ID' },
         note_ids: { type: 'array', items: { type: 'string' }, description: 'Specific note IDs to index (optional — if empty, indexes all unindexed notes)' },
       },
-      required: ['tenant_id'],
+      required: [],
     },
   },
 ];
