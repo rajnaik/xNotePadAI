@@ -13,6 +13,7 @@ A 13-tool MCP server that gives AI agents persistent, encrypted, searchable memo
 {
   "mcpServers": {
     "xnotepad": {
+      "type": "http",
       "url": "https://www.xnotepadai.com/api/mcp/",
       "headers": {
         "Authorization": "Bearer YOUR_TOKEN_HERE"
@@ -22,7 +23,7 @@ A 13-tool MCP server that gives AI agents persistent, encrypted, searchable memo
 }
 ```
 
-Get your token: https://www.xnotepadai.com/settings/ → Connected Apps → Generate Token
+Get your token: https://www.xnotepadai.com/settings/ → Your MCP Token (pre-generated, ready to copy)
 
 ## Tools
 
